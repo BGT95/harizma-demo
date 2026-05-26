@@ -2,7 +2,7 @@
 
 Одностраничный маркетинговый сайт караоке-клуба **harizma** (React + Vite + TypeScript + Tailwind). Это **демонстрационная версия**: контакты и внешние ссылки — заглушки, бронирование через Telegram-бот показывает информационное окно вместо перехода в мессенджер.
 
-**Живой пример:** `https://bgt95.github.io/demo/`
+**Живой пример:** `https://bgt95.github.io/harizma-demo/`
 
 ---
 
@@ -30,7 +30,7 @@ npm run dev
 |---------|----------|
 | `npm run dev` | Локальная разработка (`base: /`) |
 | `npm run build` | Production-сборка для корня домена |
-| `npm run build:pages` | Сборка для GitHub Pages (`base: /demo/`) |
+| `npm run build:pages` | Сборка для GitHub Pages (`base: /harizma-demo/`) |
 | `npm run deploy:pages` | Сборка и публикация в ветку `gh-pages` |
 | `npm run preview` | Просмотр последней сборки |
 | `npm run test` | Unit/smoke-тесты (Vitest) |
@@ -38,13 +38,13 @@ npm run dev
 
 ---
 
-## GitHub Pages (репозиторий `demo`)
+## GitHub Pages (репозиторий `harizma-demo`)
 
-URL: **https://bgt95.github.io/demo/** (base path `/demo/`, переименовывать репо не нужно).
+URL: **https://bgt95.github.io/harizma-demo/** (base path `/harizma-demo/`).
 
-Один раз в **Settings → Pages**: Source — **Deploy from a branch**, Branch — **gh-pages**, Folder — **/ (root)**.
+Деплой автоматический: при push в `main` срабатывает workflow `.github/workflows/deploy.yml` (GitHub Actions → Pages).
 
-Деплой вручную: `npm run deploy:pages`. При push в `main` также срабатывает workflow `.github/workflows/deploy.yml`.
+В **Settings → Pages** источник должен быть **GitHub Actions** (настраивается автоматически после первого успешного деплоя).
 
 ---
 
